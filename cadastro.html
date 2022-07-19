@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="javascript.js"></script>
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/cadastro.css" rel="stylesheet">
+    <script src="javascript/javascript.js"></script>
     <!--Icon by <a href="https://freeicons.io/profile/51091">phatplus</a> on <a href="https://freeicons.io">freeicons.io</a>-->
     <title>Sideral Cursos</title>
 </head>
@@ -23,31 +24,59 @@
     </ul>
   </header>
 
+  <div class="cadastro">
+    <h1> Cadastro </h1>
+    <form class="cadastroforms">
+      <label for="name">Qual o seu nome?</label> 
+      <input type="text" id="name">
+      <label for="phone">Telefone</label> 
+      <input type="tel" id="phone" pattern="([0-9]{2}) [0-9]{9}">
+      <label for="email">E-mail</label>
+      <input type="email" id="email">
+      <label for="selectcurso">Em qual curso você tem interesse?</label>
+      <div class="listacursosform">
+      <input type="checkbox" id="curso1" name="Curso1" value="Curso1">
+      <label for="curso1">Curso 1</label>
+      <input type="checkbox" id="curso2" name="Curso2" value="Curso2">
+      <label for="curso2">Curso 2</label>
+      <input type="checkbox" id="curso3" name="Curso3" value="Curso3">
+      <label for="curso3">Curso 3</label>
+      <input type="checkbox" id="curso4" name="Curso4" value="Curso5">
+      <label for="curso4">Curso 4</label>
+      <input type="checkbox" id="curso5" name="Curso5" value="Curso5">
+      <label for="curso5">Curso 5</label>
+      <input type="checkbox" id="curso6" name="Curso6" value="Curso6">
+      <label for="curso6">Curso 6</label>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
   <footer class="footer">
     <div class="institucional">
       <h5 class="listtitle">Institucional</h5>
       <ul class="footerlist">
-        <li>Sobre a Sideral</li>
-        <li>Política de privacidade</li>
-        <li>Termos de uso</li>
+        <li><a href="sobre.html">Sobre a Sideral ↗</a></li>
+        <li><a href="Politica de privacidade.html">Política de privacidade ↗</a></li>
+        <li><a href="termosuso.html">Termos de uso ↗</a></li>
       </ul>
     </div>
 
     <div class="sobreoscursos">
       <h5 class="listtitle">Sobre os cursos</h5>
       <ul class="footerlist">
-        <li>Cursos disponíveis</li>
-        <li>Instrutores</li>
-        <li>Depoimentos de alunos</li>
+        <li><a href="cursos.html">Cursos disponíveis ↗</a></li>
+        <li><a href="Instrutores.html">Instrutores ↗</a></li>
+        <li><a href="Depoimentos de Alunos.html">Depoimentos de aluno ↗</a></li>
       </ul>
     </div>
 
     <div class="faleconosco">
       <h5 class="listtitle">Fale conosco</h5>
       <ul class="footerlist">
-        <li>Contato</li>
-        <li>Trabalhe conosco</li>
-        <li>Sideral na imprensa</li>
+        <li><a href="Contato.html">Contato ↗</a></li>
+        <li><a href="Trabalhe Conosco.html">Trabalhe conosco ↗</a></li>
+        <li><a href="Sideral na Imprensa.html">Sideral na imprensa ↗</a></li>
       </ul>
     </div>
 

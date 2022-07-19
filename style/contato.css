@@ -1,0 +1,76 @@
+.formasdecontato {
+    display: flex;
+}
+
+.contato{
+    font-family: 'Kanit', sans-serif;
+    font: size 48px;
+    margin-top: 75px;
+    position: sticky;
+    box-sizing: border-box;
+    width: 40%;
+    height: 500px;
+    margin-left: 10%;
+    background-color: #f2f2f2;
+    padding: 15px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.contatoforms {
+    display: grid;
+    margin-left: 50%;
+    transform: translatex(-50%);
+}
+
+.contatoforms label input {
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.contato h1 {
+    color: #000;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.contatoforms label input {
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.othercontato {
+    float: right;
+    position: relative;
+    margin-top: 150px;
+    margin-left: 30px;
+    width: 20;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #f2f2f2;
+    font-family: 'Kanit', sans-serif;
+    padding: 15px;
+}
+
+.othercontato h5 {
+    font-weight: bolder;
+}
+
+.contatosocialmedia {
+    float: right;
+    position: relative;
+    margin-top: 150px;
+    margin-left: 60px;
+
+}
+
+.socialMediaIconscontato {
+    width: 60px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
