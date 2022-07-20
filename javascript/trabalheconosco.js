@@ -1,3 +1,7 @@
+(function() {
+
+    let jobslist = document.querySelector(".jobs-list");
+    
 let vagas = [{
     titulo: "Analista de CX",
     local: "São Paulo/ Remoto",
@@ -36,3 +40,12 @@ let vagas = [{
     }
 ]
 
+let jobsitems ="";
+
+for (let job of vagas) {
+    jobsitems += "<li>" + job.titulo + "<br><br>" + job.local + "<br>" + job.area + "<br>" +job.nivel +"</li>"
+    console.log|(vagas.titulo,vagas.descricao,vagas.horas, vagas.nivel)
+};
+
+jobslist.innerHTML = jobsitems;
+})();
