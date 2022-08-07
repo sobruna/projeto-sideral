@@ -27,3 +27,5 @@ function showSlides(n) {
 function alerta(){
 alert("Nenhum cadastro realizado!")
 }
+
+

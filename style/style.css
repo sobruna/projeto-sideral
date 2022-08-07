@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: #BB7FD9;
   }
 
   .headerlist {
@@ -187,16 +188,17 @@
     top: 0;
   }
 
-  /* Fading animation */
+ /* Fading animation*/
   .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 3600s;
   }
 
   @keyframes fade {
-    from {opacity: .4}
+    from {opacity: 1}
     to {opacity: 1}
-  }
+  } 
+  
 
   /* The dots/bullets/indicators */
 .dot {
