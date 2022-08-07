@@ -5,6 +5,9 @@
  * --------------------------------------------------------------------------
  */
 
+
+console.log("teste")
+
 import {
   defineJQueryPlugin,
   getElementFromSelector,
