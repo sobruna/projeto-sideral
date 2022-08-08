@@ -1,9 +1,6 @@
 .cursos {
     font-family: 'Kanit', sans-serif;
     font: size 48px;
-    margin-top: 50px;
-    position: sticky;
-    box-sizing: border-box;
     width: 60%;
     height: 500px;
     align-items: center;
@@ -19,13 +16,11 @@
 .cursos li {
     color: #f2f2f2;
     list-style-type: none;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
     background-color: #000;
     width: 30%;
     padding: 5px;
     margin: 10px;
-    float: left;
-
 } 

@@ -1,8 +1,8 @@
-  body {
+  html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     background-color: #BB7FD9;
+    height: auto;
   }
 
   .headerlist {
@@ -54,31 +54,25 @@
   .footer {
     position: absolute;
     bottom:0;
-    display: flex;
     width:100%;
-    height: 140px;
+    /*height: 140px;*/
     padding: 0px;
-    margin: 0px auto;
+    margin: 0;
     background-color: #333;
     color: #f2f2f2;
-    align-items: center;
     font-family: 'Kanit', sans-serif;
     font-size: small;
   }
 
   .institucional {
-    width: 30%;
     text-align: left;
-    margin-left: 20px;
   }
 
   .sobreoscursos {
-    width: 30%;
     text-align: left;
   }
 
   .faleconosco {
-    width: 30%;
     text-align: left;
   }
 
@@ -94,12 +88,11 @@
   }
 
   .socialmedia{
-    display: inline;
-    width: 10%;
+    display: flex;
     padding: 0;
-    margin-right: 100px;
-    position: relative;
+    flex-wrap: wrap;
   }
+
   .socialMediaIcons {
     width: 35px;
     margin-right: 4px;

@@ -43,7 +43,7 @@ let vagas = [{
 let jobsitems ="";
 
 for (let job of vagas) {
-    jobsitems += "<li>" + job.titulo + "<br><br>" + job.local + "<br>" + job.area + "<br>" +job.nivel +"</li>"
+    jobsitems += '<li class="col col-sm-2">' + job.titulo + '<br><br>' + job.local + '<br>' + job.area + '<br>' +job.nivel +'</li>'
     console.log|(vagas.titulo,vagas.descricao,vagas.horas, vagas.nivel)
 };
 

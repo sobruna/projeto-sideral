@@ -33,7 +33,7 @@
     let cursositems ="";
     
     for (let curso of cursos) {
-        cursositems += "<li>" + curso.titulo + "<br><br>" + curso.descricao + "<br>" + curso.horas + "</li>"
+        cursositems += '<li class="col col-sm-2">' + curso.titulo + '<br><br>' + curso.descricao + '<br><br>' + curso.horas + "</li>"
         console.log|(cursos.titulo,cursos.descricao,cursos.horas)
     };
     
