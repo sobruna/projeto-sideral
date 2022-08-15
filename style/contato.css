@@ -47,8 +47,8 @@
 
 .othercontato {
     float: right;
-    position: relative;
-    margin-left: 30px;
+    position:fixed;
+    margin-left: 700px;
     width: 300px;
     height: 330px;
     -webkit-border-radius: 10px 10px 10px 10px;

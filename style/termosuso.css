@@ -1,5 +1,5 @@
 .termosUso {
-  margin-top: 75px; 
+  margin-top: 30px; 
   margin-bottom: 25px;
   font-family: 'Kanit', sans-serif;
   position:static;
@@ -11,7 +11,7 @@
   -moz-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
   box-sizing: border-box;
-  height: 500px;
+  height: 400px;
   overflow-y: scroll;
 }
 
