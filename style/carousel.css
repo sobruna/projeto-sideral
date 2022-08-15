@@ -15,11 +15,15 @@ body {
 
 /* Carousel base class */
 .carousel {
+  background-color: #BB7FD9;
+  box-sizing: content-box;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
+  background: rgba(0, 0, 0, 0.61);
+  padding: 10px;
 }
 
 /* Declare heights because of positioning of img element */
@@ -37,10 +41,12 @@ body {
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
     line-height: 1.4;
+    position: relative;
+    
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 8vw;
   }
 }
 
@@ -52,7 +58,6 @@ body {
 
 
 .carousel-img { 
-  height: 32rem;
-  width: auto; 
   object-fit: contain;
+  height: auto;
 }
