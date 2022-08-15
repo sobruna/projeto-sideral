@@ -18,10 +18,7 @@ function login(){
 
 }
 
-console.log("teste");
-let email = document.getElementById("email")
-let html =  document.getElementById("logado").innerHTML;
-document.getElementById("logado").innerHTML = html;
+
 
 let input = document.getElementById("senha");
     input.addEventListener("keyup", function(event) {

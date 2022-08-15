@@ -30,9 +30,9 @@ div h2{
   div button{
     margin-left: 48%;
     transform: translateX(-50%);
-    padding: 15px;
+    padding: 10px;
     margin-top: 10px;
-    background-color: #1d3c9a;
+    /*background-color: #7b7e86;*/
     border-radius: 10px;
 
   }
@@ -42,5 +42,5 @@ div input{
  border-radius: 10px;
 }
 div button:hover{
-  background-color: rgb(50, 160, 59);
+  background-color: rgb(116, 122, 116);
 }
