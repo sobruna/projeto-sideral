@@ -1,16 +1,16 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
+const express = require('express')
+const app = express()
+const cors = require('cors')
 
-require("dotenv-safe").config();
+require('dotenv-safe').config();
 
-const db = require("./database/mongoConfig");
-db.connect();
+const db = require('./database/mongoConfig')
+const userRoutes = require('./routes/userRoutes')
 
-app.use(cors());
-app.use(express.json());
+db.connect() 
 
-const usersRoutes = require("./routes/usersRoutes");
-app.use("/users", usersRoutes);
+app.use(cors())
+app.use(express.json())
+app.use("/users", userRoutes)
 
-module.exports = app;
+module.exports = app

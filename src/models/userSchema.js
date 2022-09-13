@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-const usersSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     id: mongoose.Schema.Types.ObjectId,
     name: {
         type: String,
@@ -18,6 +18,6 @@ const usersSchema = new mongoose.Schema({
         type: Date,
         default: new Date()
     }
-});
+})
 
-module.exports = mongoose.model('user', usersSchema);
+module.exports = mongoose.model('user', userSchema)
