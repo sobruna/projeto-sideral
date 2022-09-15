@@ -30,7 +30,76 @@ const createUser = async (req, res) => {
   }
 }
 
+const updateUser = async (req, res) => {
+    const id = req.params.id
+    const {name, phone, email, password} = req.body
+    
+    const userUp = {
+        name,
+        phone, 
+        email, 
+        password 
+    }
+    
+
+    try{
+        const updateUser = await UserSchema.updateOne({_id: id}, userUp)
+        
+        //  if (updateUser.matchedCount===0){
+        //      res.status(422).json({
+        //          message: "Usuário não existe"
+                
+        //      })
+            
+        // }
+        res.status(200).json({
+            message: "Usuario atualizado com sucesso!",
+            userUp
+        })
+        return
+    } 
+    catch (error){
+        res.status(500).json({
+            message: error.message
+        })
+    }
+   
+}
+
+const deleteUser = async (req, res) => {
+    const id = req.params.id
+    const {name, phone, email, password} = req.body
+    
+    const userDelete = {
+        name,
+        phone, 
+        email, 
+        password 
+    }
+    
+
+    try{
+        const deleteUser = await UserSchema.deleteOne({_id: id}, userDelete)
+        
+        res.status(200).json({
+            message: "Usuario removido com sucesso!",
+            userDelete
+        })
+        return
+    } 
+    catch (error){
+        res.status(500).json({
+            message: error.message
+        })
+    }
+   
+}
+
+module.exports = {getAll,createUser, updateUser, deleteUser}
+
 module.exports = {
-  getAll,
-  createUser
+    getAll,
+    createUser,
+    updateUser,
+    deleteUser
 }
