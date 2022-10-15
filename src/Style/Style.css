@@ -1,0 +1,40 @@
+  html, body {
+    background-color: #bb7fd9;
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    position: relative;
+    min-height: 100%;
+
+  }
+
+  body {
+    margin-bottom: 200px;
+  }
+
+
+  .icon {
+    width: 40px;
+    margin-left: 15px;
+  }
+
+  #font-link {
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .socialMediaIcons {
+    width: 40px;
+    margin: 2px
+  }
+
+
+  footer {
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+  }
