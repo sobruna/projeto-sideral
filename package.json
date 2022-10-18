@@ -4,6 +4,7 @@
   "description": "Plataforma educacional",
   "main": "server.js",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

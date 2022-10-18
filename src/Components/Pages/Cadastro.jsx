@@ -12,7 +12,7 @@ import css from "../../Style/Import.css";
 export default function Cadastro() {
   return (
     <Default>
-      <div className="d-flex p-2 flex-column">
+      <div className="d-flex p-4 mx-5 my-5 flex-column bg-light rounded">
         <h1 className="p-2 align-self-center">
           Comece sua jornada com a gente!
         </h1>

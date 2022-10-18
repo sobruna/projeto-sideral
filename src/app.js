@@ -16,10 +16,15 @@ import BootStrapCarousel from "./Components/Pages/BootstrapCarousel";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WebFont from 'webfontloader';
 
-
-
-
 function App() {
+  const [data, setData] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
+
   return (
     <BrowserRouter>
     <Routes>
