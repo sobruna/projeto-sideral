@@ -1,105 +1,92 @@
 const UserSchema = require("../models/userSchema")
-bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken")
+
+const SECRET = process.env.SECRET
 
 const getAll = async (req, res) => {
-  UserSchema.find(function (err, users) {
-    if(err) {
-      res.status(500).send({ message: err.message })
+    const authHeader = req.get('authorization')
+    const token = authHeader && authHeader.split(" ")[1];
+  
+    if (!token) {
+      return res.status(401).send("Erro no header")
     }
-      res.status(200).send(users)
-  }) 
-}
+
+    jwt.verify(token, SECRET, (err) => {
+        if(err) {
+            return res.status(401).send("Não autorizado")
+        }
+    })
+      
+    UserSchema.find(function (err, users) {
+      if(err) {
+        res.status(500).send({ message: err.message })
+      }
+        res.status(200).send(users)
+    }) 
+  }
 
 const createUser = async (req, res) => {
+    const hashedPassword = bcrypt.hashSync(req.body.password, 10)
+    req.body.password = hashedPassword
 
-  const hashedPassword = bcrypt.hashSync(req.body.password, 10)
-  req.body.password = hashedPassword
-  try {
-      const newUser = new UserSchema(req.body)
+    try {
+        const newUser = new UserSchema(req.body)
 
-      const savedUser = await newUser.save()
+        const savedUser = await newUser.save()
 
-      res.status(200).json({
-          message: "User adicionado com sucesso!",
-          savedUser
-      })
-  } catch (error) {
-      res.status(500).json({
-          message: error.message
-      })
-  }
-}
-
-const updateUser = async (req, res) => {
-    const id = req.params.id
-    const {name, phone, email, password} = req.body
-    
-    const userUp = {
-        name,
-        phone, 
-        email, 
-        password 
-    }
-    
-
-    try{
-        const updateUser = await UserSchema.updateOne({_id: id}, userUp)
-        
-        //  if (updateUser.matchedCount===0){
-        //      res.status(422).json({
-        //          message: "Usuário não existe"
-                
-        //      })
-            
-        // }
         res.status(200).json({
-            message: "Usuario atualizado com sucesso!",
-            userUp
+            message: "Usuário adicionado com sucesso!",
+            savedUser
         })
-        return
-    } 
-    catch (error){
+    } catch (error) {
         res.status(500).json({
             message: error.message
         })
     }
-   
 }
 
-const deleteUser = async (req, res) => {
-    const id = req.params.id
-    const {name, phone, email, password} = req.body
-    
-    const userDelete = {
-        name,
-        phone, 
-        email, 
-        password 
-    }
-    
+const updateUserById = async (req, res) => {
+    try {
+        const findUser = await UserSchema.findById(req.params.id)
 
-    try{
-        const deleteUser = await UserSchema.deleteOne({_id: id}, userDelete)
-        
+        if (findUser) {            
+            findUser.name = req.body.name || findUser.name
+            findUser.email = req.body.email || findUser.email
+        }
+
+        const savedUser = await findUser.save()
+
         res.status(200).json({
-            message: "Usuario removido com sucesso!",
-            userDelete
+            message: "Usuário atualizado com sucesso!",
+            savedUser
         })
-        return
-    } 
-    catch (error){
-        res.status(500).json({
-            message: error.message
-        })
+
+    } catch (error) {
+        console.error(error)
     }
-   
 }
 
-module.exports = {getAll,createUser, updateUser, deleteUser}
+const deleteUserById = async (req, res) => {
+    try {
+        const userFound = await UserSchema.findById(req.params.id)
+
+       await userFound.delete()
+
+       res.status(200).json({
+           mensagem: `Usuário '${userFound.email}' deletado com sucesso!`
+       })
+
+    } catch (err) {
+        res.status(400).json({
+            mensagem: err.message
+        })
+    }
+} 
 
 module.exports = {
     getAll,
     createUser,
-    updateUser,
-    deleteUser
+    updateUserById, 
+    deleteUserById
 }

@@ -1,5 +1,13 @@
 import React from "react";
 
+import Default from "../Templates/Default";
+
+import css from "../../Style/Import.css";
+
 export default function SobreASideral() {
-  return <div>Bla Bla Bla</div>;
+  return (
+    <Default>
+      <div>Bla Bla Bla</div>
+    </Default>
+  );
 }

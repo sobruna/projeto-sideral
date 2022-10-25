@@ -1,4 +1,4 @@
-fetch(`http://localhost:3000`)
+fetch(`http://localhost:8080/users/all`)
     .catch((error) => console.log("Não deu: "+ error))
     .then((resposta) => resposta.json())
     .then((dados) => {console.log(dados);

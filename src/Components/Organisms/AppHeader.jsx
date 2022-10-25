@@ -1,17 +1,8 @@
 import React from "react";
 
-import logo from "../../Images/icon.png";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
-import Home from "../Pages/Home";
-import Cadastro from "../Pages/Cadastro";
-import Cursos from "../Pages/Cursos";
-import DepoimentosDeAlunos from "../Pages/DepoimentosDeAlunos";
-import Instrutores from "../Pages/Instrutores";
-import Login from "../Pages/Login";
-import SideralNaImprensa from "../Pages/SideralNaImprensa";
-import SobreASideral from "../Pages/SobreASideral";
-import TermosDeUso from "../Pages/TermosDeUso";
-import TrabalheConosco from "../Pages/TrabalheConosco";
+import logo from "../../Images/icon.png";
 
 import App from "../../App";
 
@@ -21,9 +12,9 @@ export default function AppHeader() {
   return (
     <header className="pb-3">
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img className="icon" src={logo} />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -37,28 +28,41 @@ export default function AppHeader() {
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home<span className="sr-only"></span>
-              </a>
+              <Link className="nav-link" to="/">
+                Página Inicial<span className="sr-only"></span>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/cadastro">
                 Cadastro
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/cursos">
                 Cursos
-              </a>
+              </Link>
             </li>
             <li className="nav-item ">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/login">
                 Login
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+  );
+}
+
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
   );
 }

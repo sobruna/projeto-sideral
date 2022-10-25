@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Default from "../Templates/Default";
 import css from "../../Style/Import.css";
 import logo from "../../Images/icon.png";
 import loginimg from "../../Images/login.jpg";
+import PropTypes from "prop-types";
 
 export default function Login() {
   return (
@@ -19,6 +20,12 @@ export default function Login() {
                       alt="login form"
                       className="img-fluid p-5"
                     />
+                    <h6 className="px-3">
+                      Imagem de{" "}
+                      <a href="https://br.freepik.com/vetores-gratis/fundo-de-foguete-de-construcao-de-equipe_4443347.htm#query=foguete&position=7&from_view=search&track=sph">
+                        Freepik
+                      </a>
+                    </h6>
                   </div>
                   <div className="col-md-6 col-lg-7 d-flex align-items-center">
                     <div className="card-body p-4 p-lg-5 text-black">
@@ -32,7 +39,7 @@ export default function Login() {
                         <div className="form-outline mb-4">
                           <input
                             type="email"
-                            id="UserEmail"
+                            id="email"
                             className="form-control form-control-lg"
                           />
                           <label className="form-label" for="form2Example17">
@@ -43,7 +50,7 @@ export default function Login() {
                         <div className="form-outline mb-4">
                           <input
                             type="password"
-                            id="UserPassword"
+                            id="password"
                             className="form-control form-control-lg"
                           />
                           <label className="form-label" for="form2Example27">
@@ -53,7 +60,7 @@ export default function Login() {
 
                         <div className="pt-1 mb-4">
                           <button
-                            className="btn btn-dark btn-lg btn-block"
+                            className="appButton btn-dark btn-lg btn-block"
                             type="button"
                           >
                             Login
@@ -71,12 +78,6 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <h6>
-          Imagem de{" "}
-          <a href="https://br.freepik.com/vetores-gratis/fundo-de-foguete-de-construcao-de-equipe_4443347.htm#query=foguete&position=7&from_view=search&track=sph">
-            Freepik
-          </a>
-        </h6>
       </section>
     </Default>
   );

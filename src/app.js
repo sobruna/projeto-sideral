@@ -17,14 +17,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WebFont from 'webfontloader';
 
 function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
   return (
     <BrowserRouter>
     <Routes>
@@ -38,6 +30,7 @@ function App() {
       <Route path="/termos-de-uso" element={<TermosDeUso />} />;
       <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />;
       <Route path="/logado" element={<Logado />} />  
+      <Route path="/sobre" element={<SobreASideral />} />
     </Routes>
     </BrowserRouter>
   );
