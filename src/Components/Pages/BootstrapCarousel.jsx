@@ -11,9 +11,9 @@ function BootstrapCarousel() {
       <Carousel className="Carrossel">
         <Carousel.Item>
           <img className="d-block w-100" src={ChamadaZoom} alt="First slide" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <Carousel.Caption className="bg-black bg-opacity-50 rounded-4">
+            <h3>Cursos de onde você estiver</h3>
+            <h4>Instrutores disponíveis nos melhores horários para você!</h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -23,9 +23,12 @@ function BootstrapCarousel() {
             alt="Second slide"
           />
 
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Carousel.Caption className="bg-black bg-opacity-50 rounded-4">
+            <h3>Escolha seu ritmo!</h3>
+            <h4>
+              Você escolhe em quanto tempo quer terminar o curso, e pode
+              estender o prazo sempre que precisar!
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -35,11 +38,11 @@ function BootstrapCarousel() {
             alt="Third slide"
           />
 
-          <Carousel.Caption>
+          <Carousel.Caption className="bg-black bg-opacity-50 rounded-4">
             <h3>Third slide label</h3>
-            <p>
+            <h4>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -49,11 +52,11 @@ function BootstrapCarousel() {
             alt="Third slide"
           />
 
-          <Carousel.Caption>
+          <Carousel.Caption className="bg-black bg-opacity-50 rounded-4">
             <h3>Third slide label</h3>
-            <p>
+            <h4>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            </h4>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

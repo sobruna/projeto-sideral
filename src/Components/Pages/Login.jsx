@@ -6,6 +6,25 @@ import loginimg from "../../Images/login.jpg";
 import PropTypes from "prop-types";
 
 export default function Login() {
+  const [email, SetEmail] = React.useState("");
+  const [password, SetPassword] = React.useState("");
+  const handleLogin = async () => {
+    let result = await fetch("http://localhost:8080/users/login", {
+      method: "post",
+      body: JSON.stringify({ email, password }),
+      hearders: {
+        "Content-Type": "application/json",
+      },
+    });
+    result = await result.json();
+    console.warn(result);
+    if (result.name) {
+    } else {
+      alert("Verifique seu e-mail ou senha, por favor!");
+      console.log(email, password);
+    }
+  };
+
   return (
     <Default>
       <section className="vh-100">
@@ -40,6 +59,9 @@ export default function Login() {
                           <input
                             type="email"
                             id="email"
+                            placeholder="exemplo@exemplo.com"
+                            value={email}
+                            onChange={(e) => SetEmail(e.target.value)}
                             className="form-control form-control-lg"
                           />
                           <label className="form-label" for="form2Example17">
@@ -51,25 +73,25 @@ export default function Login() {
                           <input
                             type="password"
                             id="password"
+                            placeholder=""
+                            value={password}
+                            onChange={(e) => SetPassword(e.target.value)}
                             className="form-control form-control-lg"
                           />
                           <label className="form-label" for="form2Example27">
                             Senha
                           </label>
                         </div>
-
-                        <div className="pt-1 mb-4">
-                          <button
-                            className="appButton btn-dark btn-lg btn-block"
-                            type="button"
-                          >
-                            Login
-                          </button>
-                        </div>
-
-                        <a className="small text-muted" href="#!">
+                        <button
+                          className="btn btn-light px-5 rounded-pill shadow-sm"
+                          type="button"
+                          onClick={handleLogin}
+                        >
+                          Login
+                        </button>
+                        {/* <a className="small text-muted" href="#!">
                           Esqueceu sua senha?
-                        </a>
+                        </a> */}
                       </form>
                     </div>
                   </div>

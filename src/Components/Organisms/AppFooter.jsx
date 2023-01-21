@@ -23,11 +23,11 @@ export default function AppFooter() {
                 Termos de Uso
               </Link>
             </li>
-            <li className="nav-item mb-2">
+            {/* <li className="nav-item mb-2">
               <Link to="/trabalhe-conosco" className="nav-link p-0 text-white">
                 Trabalhe Conosco
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -47,11 +47,6 @@ export default function AppFooter() {
             <li className="nav-item mb-2">
               <Link to="/cadastro" className="nav-link p-0 text-white">
                 Cadastro
-              </Link>
-            </li>
-            <li className="nav-item mb-2">
-              <Link to="/depoimentos" className="nav-link p-0 text-white">
-                Depoimentos de Alunos
               </Link>
             </li>
           </ul>

@@ -36,6 +36,15 @@ export default function Cadastro() {
             />
           </div>
           <div className="form-group p-3">
+            <label for="EmailUsuario">Digite uma senha:</label>
+            <input
+              type="senha"
+              className="form-control"
+              id="SenhaUsuario"
+              placeholder="*********"
+            />
+          </div>
+          <div className="form-group p-3">
             <label for="TelefoneUsuario">Qual é o seu telefone?</label>
             <input
               type="tel"
@@ -43,19 +52,6 @@ export default function Cadastro() {
               id="TelefoneUsuario"
               placeholder="(00) 00000-0000"
             />
-          </div>
-          <div className="form-group p-3">
-            <label for="CursoDeInteresse">
-              Em qual curso você tem interesse?
-            </label>
-            <select className="form-control" id="CursoDeInteresse">
-              <option>Curso 1</option>
-              <option>Curso 2</option>
-              <option>Curso 3</option>
-              <option>Curso 4</option>
-              <option>Curso 5</option>
-              <option>Curso 6</option>
-            </select>
           </div>
           <div className="col-auto">
             <button type="submit" className="btn btn-primary mb-2">
