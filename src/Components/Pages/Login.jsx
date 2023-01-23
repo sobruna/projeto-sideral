@@ -4,6 +4,7 @@ import css from "../../Style/Import.css";
 import logo from "../../Images/icon.png";
 import loginimg from "../../Images/login.jpg";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, SetEmail] = React.useState("");
@@ -50,8 +51,11 @@ export default function Login() {
                     <div className="card-body p-4 p-lg-5 text-black">
                       <form>
                         <div className="d-flex mb-3 pb-1 justify-content-center">
-                          <span className="h1 fw-bold mb-3 mx-2">
-                            Entre na sua conta:
+                          <span className="h2 fw-bold mb-3 mx-2 text-center">
+                            Entre na sua conta ou{" "}
+                            <Link to="/cadastro" className="h2 fw-bold mb-3">
+                              Cadastre-se
+                            </Link>
                           </span>
                         </div>
 
@@ -89,9 +93,9 @@ export default function Login() {
                         >
                           Login
                         </button>
-                        {/* <a className="small text-muted" href="#!">
+                        <a className="small text-muted" href="#!">
                           Esqueceu sua senha?
-                        </a> */}
+                        </a>
                       </form>
                     </div>
                   </div>
