@@ -17,8 +17,8 @@ app.get("/api", (req, res) => {
 
 app.listen(PORT, () => console.log("Servidor rodando na porta " + PORT));
 
-app.use('/login', (req, res) => {
-  res.send({
-    token: 'test123'
-  });
-});
+// app.use('/login', (req, res) => {
+//   res.send({
+//     token: 'test123'
+//   });
+// });

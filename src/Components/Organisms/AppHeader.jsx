@@ -10,47 +10,41 @@ import "../../Style/Import.css";
 
 export default function AppHeader() {
   return (
-    <header className="pb-3">
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <Link className="navbar-brand" to="/">
-          <img className="icon" src={logo} />
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <Link className="nav-link" to="/">
-                Página Inicial<span className="sr-only"></span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/cadastro">
-                Cadastro
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/cursos">
+    <div class="m-4 mb-5">
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container-fluid">
+          <Link className="navbar-brand" to="/">
+            <img className="icon sp-logo" src={logo} />
+          </Link>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+              <Link to="/cursos" class="nav-item nav-link active">
                 Cursos
               </Link>
-            </li>
-            <li className="nav-item ">
-              <Link className="nav-link" to="/login">
+              <Link to="/instrutores" class="nav-item nav-link active">
+                Instrutores
+              </Link>
+              <Link to="/cadastro" class="nav-item nav-link active">
+                Cadastro
+              </Link>
+            </div>
+            <div class="navbar-nav ms-auto">
+              <Link to="/login" class="nav-item nav-link">
                 Login
               </Link>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </nav>
-    </header>
+    </div>
   );
 }
 
