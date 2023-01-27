@@ -129,6 +129,9 @@ export default function Cadastro() {
                     >
                       Fazer cadastro
                     </button>
+                    <a className="small text-white mx-3" href="#!">
+                      Já é cadastrado?
+                    </a>
                   </div>
                 </form>
               </div>

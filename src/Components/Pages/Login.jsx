@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Default from "../Templates/Default";
-import css from "../../Style/Import.css";
-import logo from "../../Images/icon.png";
 import loginimg from "../../Images/login.jpg";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 export default function Login() {
-  const [email, SetEmail] = React.useState("");
-  const [password, SetPassword] = React.useState("");
+  const [emailInput, SetEmail] = React.useState("");
+  const [passwordInput, SetPassword] = React.useState("");
   const handleLogin = async () => {
     let result = await fetch("http://localhost:8080/users/login", {
       method: "post",
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ emailInput, passwordInput }),
       hearders: {
         "Content-Type": "application/json",
       },
@@ -22,7 +19,7 @@ export default function Login() {
     if (result.name) {
     } else {
       alert("Verifique seu e-mail ou senha, por favor!");
-      console.log(email, password);
+      console.log(emailInput, passwordInput);
     }
   };
 
@@ -64,7 +61,7 @@ export default function Login() {
                             type="email"
                             id="email"
                             placeholder="exemplo@exemplo.com"
-                            value={email}
+                            value={emailInput}
                             onChange={(e) => SetEmail(e.target.value)}
                             className="form-control form-control-lg"
                           />
@@ -78,7 +75,7 @@ export default function Login() {
                             type="password"
                             id="password"
                             placeholder=""
-                            value={password}
+                            value={passwordInput}
                             onChange={(e) => SetPassword(e.target.value)}
                             className="form-control form-control-lg"
                           />
@@ -93,7 +90,8 @@ export default function Login() {
                         >
                           Login
                         </button>
-                        <a className="small text-muted" href="#!">
+
+                        <a className="small text-muted mx-3" href="#!">
                           Esqueceu sua senha?
                         </a>
                       </form>

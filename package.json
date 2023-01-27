@@ -15,7 +15,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.2.3",
+    "axios": "^1.2.5",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv-safe": "^8.2.0",
@@ -29,6 +29,7 @@
     "react-native-svg": "^13.7.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
+    "universal-cookie": "^4.0.4",
     "web-vitals": "^2.1.4",
     "webfontloader": "^1.6.28"
   },

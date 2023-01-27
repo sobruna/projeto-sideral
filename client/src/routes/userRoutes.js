@@ -4,7 +4,7 @@ const router = express.Router()
 const controller = require("../controllers/userController")
 const authController = require("../controllers/authController")
 
-router.get("/all", controller.getAll);
+router.get("/all", controller.getAll); //getAll é uma função
 
 router.post("/create", controller.createUser);
 
